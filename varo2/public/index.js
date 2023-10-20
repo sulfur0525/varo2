@@ -30,13 +30,29 @@ window.addEventListener('scroll', function(){
 		document.querySelector(".menu").style.top = '0';
 		document.querySelector(".logo").style.paddingRight = '600px';
 		document.querySelector(".menu ul").style.padding = '0px 300px';
-		document.querySelector(".menu ul").style.backgroundColor = 'rgb(60 60 60 / 60%)'
+		document.querySelector(".menu ul").style.backgroundImage = 'url("img/00-1. 카테고리-배경-박스.png")'
 	}else{
 		document.querySelector(".menu").style.width = '1300px';
 		document.querySelector(".menu").style.borderBottom = '1px solid white';
 		document.querySelector(".menu").style.position = 'static';
 		document.querySelector(".logo").style.paddingRight = '0px';
 		document.querySelector(".menu ul").style.padding = '0px';
-		document.querySelector(".menu ul").style.backgroundColor = 'transparent'
+		document.querySelector(".menu ul").style.backgroundImage = 'none'
 	}
 });
+
+/* 페이드인 */
+let elementsArray = document.querySelectorAll(".logo_box");
+window.addEventListener("scroll", fadeIn);
+function fadeIn() {
+  for (var i = 0; i < elementsArray.length; i++) {
+    var elem = elementsArray[i];
+    var distInView = elem.getBoundingClientRect().top - window.innerHeight + 20;
+    if (distInView < 0) {
+      elem.classList.add("inView");
+    }
+  }
+}
+fadeIn();
+
+
