@@ -16,17 +16,17 @@
 			<!-- 메뉴 -->
 			<div class="menu">
 				<ul>
-					<li><a href="#menu1"><img src="img/01-2. 메인_로고.png"></a></li>
-					<li><a href="#menu2">회사소개</a></li>
-					<li><a href="#menu3">PARTNERS</a></li>
-					<li><a href="#menu4">WE DO</a></li>
-					<li><a href="#menu5">상품컨설팅</a></li>
-					<li><a href="#menu6"><div class="contact_btn extralight">상담문의</div></a></li>
+					<li><a href="#"><img src="img/01-2. 메인_로고.png"></a></li>
+					<li onclick="move(1)">회사소개</li>
+					<li onclick="move(2)">PARTNERS</li>
+					<li onclick="move(3)">WE DO</li>
+					<li onclick="move(4)">상품컨설팅</li>
+					<li onclick="move(5)"><div class="contact_btn extralight">상담문의</div></li>
 				</ul>
 			</div>
 			
 			<!-- 메인글귀 -->
-			<div class="main_text">
+			<div class="main_text menu1" id="menu1">
 				<div class="main_text1">
 					<div>
 						<span class="blue bold">VARO</span>
@@ -61,7 +61,7 @@
 		</div>
 		
 		<!-- 파트너 -->
-		<div class="partners_box">
+		<div class="partners_box menu2" id="menu2">
 			<div class="partner_title bold">PARTNERS</div>
 			<div class="logo_warp">
 				<div class="logo_box">
@@ -82,7 +82,7 @@
 		</div>
 		
 		<!-- WEDO(숫자) -->
-		<div class="wedo_box">
+		<div class="wedo_box menu3" id="menu3">
 			<div class="date bold"> 23년 9월 6일 </div>
 			<div class="wedo_nums">
 				<div>
@@ -101,7 +101,7 @@
 		</div>
 		
 		<!-- 컨설팅 -->
-		<div class="consulting_box">
+		<div class="consulting_box menu4" id="menu4">
 			<!-- What We Do -->
 			<div class="consulting_set1">
 				<div>
@@ -284,7 +284,7 @@
 		</div>
 		
 		<!-- 상담 -->
-		<div class="contact_box">
+		<div class="contact_box menu5" id="menu5">
 			<div class="contact_bg">
 				<div class="contact_title bold"> 직접 듣고 싶어요!</div>
 				<div class="contact_line1">
@@ -378,5 +378,6 @@
 	
 	<!-- 사용자 정의 js -->
 	<script src="index.js" type="text/javascript"></script>
+	
 </body>
 </html>
