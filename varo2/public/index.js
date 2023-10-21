@@ -25,7 +25,8 @@ window.addEventListener('scroll', function(){
 	menu();
 	num();
 	fadeIn();
-	bg_move()
+	bg_move();
+	line_move();
 });
 
 
@@ -83,7 +84,7 @@ function fadeIn() {
 
 /* 숫자 액션 */
 function num(){
-	let wedo_box = document.querySelector("#menu2").offsetTop+180;
+	let wedo_box = document.querySelector("#menu3").offsetTop-window.innerHeight/2;;
 	let wedo_box2 = document.querySelector("#menu4").offsetTop
 	//console.log(window.scrollY+'=='+wedo_box)
 	if(window.scrollY>=wedo_box && window.scrollY<=wedo_box2){
@@ -110,20 +111,34 @@ function num(){
 
 /* 스크롤 하면 배경이동 */
 function bg_move(){
-	let wedo_box_top = document.querySelector("#menu2").offsetTop+200;
-	let wedo_box_bottom = document.querySelector("#menu4").offsetTop-200
+	let wedo_box_top = document.querySelector("#menu3").offsetTop-window.innerHeight/2;
+	let wedo_box_bottom = document.querySelector("#menu3").offsetTop+window.innerHeight/2;
 	//console.log( window.scrollY )
 	if(window.scrollY>=wedo_box_top && window.scrollY<=wedo_box_bottom){
 		//console.log(window.scrollY);
 		//console.log(wedo_box_top)
 		let position = Math.floor((window.scrollY-wedo_box_top)/4); 
-		console.log(position);
+		//console.log(position);
 		if(position<=100){
 			document.querySelector(".wedo_box").style.backgroundPosition = '50% '+position+'%'
 		}
 	}
 }
 
+/* 선 떨어지기? */
+function line_move(){
+	let box_top = document.querySelector("#menu5").offsetTop-window.innerHeight+120;
+	//console.log(window.scrollY)
+	//console.log(box_top)
+	if(window.scrollY>=box_top){
+		let cnt = window.scrollY-box_top
+		console.log(cnt)
+		if(cnt<=120){
+			document.querySelector(".line2").style.height = cnt+'px'	
+		}
+	}
+	
+}
 
 
 

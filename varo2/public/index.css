@@ -213,6 +213,7 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
 }
 /* What We Do */
 .consulting_set1{
@@ -353,6 +354,16 @@ a{
 	font-size: 30px;
 	text-align: center;
 }
+/* 스크롤? */
+.line{
+	font-size: 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    background-color: white;
+    width: 2px;
+    height: 120px;
+}
 
 /*---- 05. 상담 ----*/
 .contact_box{
@@ -363,6 +374,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .contact_bg{
 	background-image: url("img/05-2. 상담문의_내용 박스.png");
@@ -459,6 +471,16 @@ textarea:focus {outline: none;}
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+/* 스크롤? */
+.line2{
+	font-size: 30px;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    background-color: white;
+    width: 2px;
+    height: 0px;
 }
 
 /*---- 06. 회사정보 ----*/
