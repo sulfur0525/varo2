@@ -177,9 +177,8 @@ a{
 /*---- 03. WEDO(숫자) ----*/
 .wedo_box{
 	background-image: url("img/03. WEDO_배경.png");
-	height: 550px;
-	background-position: center;
-    background-size: cover;
+	background-position: 50% 0%;
+	height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
