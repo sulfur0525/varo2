@@ -53,20 +53,23 @@ function move_ball(){
 /* 스크롤 움직일때 메뉴 고정 */
 function menu(){
 	if(window.scrollY>0){
-		document.querySelector(".menu").style.width = '100%';
-		document.querySelector(".menu").style.borderBottom = 'none';
 		document.querySelector(".menu").style.position = 'fixed';
-		document.querySelector(".menu").style.top = '0';
-		document.querySelector(".logo").style.paddingRight = '600px';
-		document.querySelector(".menu ul").style.padding = '0px 300px';
-		document.querySelector(".menu ul").style.backgroundImage = 'url("img/00-1. 카테고리-배경-박스.png")'
+		document.querySelector(".menu").style.border = 'none';
+		document.querySelector(".menu").style.backgroundColor = 'rgb(86 86 86 / 50%)';
+		document.querySelector(".menu").style.height = '6vh';
+		document.querySelector(".menu").style.width = '100%';
+		document.querySelector(".menu").style.gridTemplateColumns = '15% 55%';
+		document.querySelector(".menu").style.justifyContent = 'center';
+		document.querySelector(".menu ul").style.justifyContent = 'flex-end';
 	}else{
-		document.querySelector(".menu").style.width = '1300px';
-		document.querySelector(".menu").style.borderBottom = '1px solid white';
 		document.querySelector(".menu").style.position = 'static';
-		document.querySelector(".logo").style.paddingRight = '0px';
-		document.querySelector(".menu ul").style.padding = '0px';
-		document.querySelector(".menu ul").style.backgroundImage = 'none'
+		document.querySelector(".menu").style.borderBottom = '1px solid white';
+		document.querySelector(".menu").style.backgroundColor = 'transparent';
+		document.querySelector(".menu").style.height = '8vh';
+		document.querySelector(".menu").style.width = '70vw';
+		document.querySelector(".menu").style.gridTemplateColumns = '1fr 5fr';
+		document.querySelector(".menu").style.justifyContent = 'space-between';
+		document.querySelector(".menu ul").style.justifyContent = 'space-between';
 	}
 }
 
@@ -131,10 +134,10 @@ function line_move(){
 	//console.log(window.scrollY)
 	//console.log(box_top)
 	if(window.scrollY>=box_top){
-		let cnt = window.scrollY-box_top
+		let cnt = (window.scrollY-box_top)/10 
 		console.log(cnt)
-		if(cnt<=120){
-			document.querySelector(".line2").style.height = cnt+'px'	
+		if(cnt<=12){
+			document.querySelector(".line2").style.height = cnt+'vh'
 		}
 	}
 	

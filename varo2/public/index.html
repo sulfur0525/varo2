@@ -3,8 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>VARO ADMENT</title>
-	<!-- 사용자 정의 css -->
-	<link href="index.css" rel="stylesheet">
+	<!-- 반응형 웹 -->
+	<link href="pc.css" media="all and (min-width:1024px)" rel="stylesheet">
+	<link href="tablet.css" media="all and (min-width:768px) and (max-width:1023px)" rel="stylesheet">
+	<link href="smartphone.css" media="all and (max-width:767px)" rel="stylesheet">
+
+	<!-- 
+		<style type="text/css">
+			/* 테블릿 가로,PC (해상도 1024px)*/ 
+			@media all and (min-width:1024px) {} 
+			
+			/*  테블릿 세로 (해상도 768px ~ 1023px)*/ 
+			@media all and (min-width:768px) and (max-width:1023px) {} 
+			
+			/*  모바일 가로, 모바일 세로 (해상도 767px)*/ 
+			@media all and (max-width:767px) {}
+		</style> 
+	-->
 	
 </head>
 <body>
@@ -20,16 +35,20 @@
 		<!-- 메인 -->
 		<div class="main_box">
 			<!-- 메뉴 -->
-			<div class="menu">
-				<ul>
-					<li class="logo"><a href="#"><img src="img/01-2. 메인_로고.png"></a></li>
-					<li onclick="move(1)">회사소개</li>
-					<li onclick="move(2)">PARTNERS</li>
-					<li onclick="move(3)">WE DO</li>
-					<li onclick="move(4)">상품컨설팅</li>
-					<li onclick="move(5)"><div class="contact_btn">상담문의</div></li>
-				</ul>
-			</div>
+			<ul class="menu">
+				<li class="logo">
+					<a href="#"><img src="img/01-2. 메인_로고.png"></a>
+				</li>
+				<li>
+					<ul>
+						<li onclick="move(1)" class="list1">회사소개</li>
+						<li onclick="move(2)" class="list1">PARTNERS</li>
+						<li onclick="move(3)" class="list1">WE DO</li>
+						<li onclick="move(4)" class="list1">상품컨설팅</li>
+						<li onclick="move(5)" class="list1"><div class="contact_btn">상담문의</div></li>
+					</ul>
+				</li>
+			</ul>
 			
 			<!-- 메인글귀 -->
 			<div class="main_text menu1" id="menu1">
@@ -138,7 +157,7 @@
 							<div class="consulting_info extralight">바이럴 마케팅</div>
 						</div>
 					</div>
-					<div class="dot_line">...................................................</div>
+					<div class="dot_line"></div>
 					<div class="consulting_result">
 						<div class="bold consulting_list">Sales</div>
 						<div class="result_info extralight">매출·브랜드 성장</div>
@@ -230,7 +249,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="box_warp">
+					<div class="box_warp2">
 						<div class="service_box extralight">
 							<div class="service_title_box">
 								<div class="service_title_info">경험해 본 적 없는 압도적인 성과</div>
@@ -252,6 +271,7 @@
 								</div>
 							</div>
 						</div>
+						<div></div>
 						<div class="service_box extralight">
 							<div class="service_title_box">
 								<div class="service_title_info">믿은 수 없는 입소문의 힘</div>
