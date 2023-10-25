@@ -372,6 +372,9 @@ ul{list-style: none;}
     align-items: center;
     justify-content: space-evenly;
 }
+.service_box3{
+	margin: 0 6%;
+}
 .service_box2{
 	height: 98%;
 }
@@ -432,7 +435,7 @@ ul{list-style: none;}
 	    border: 2px solid #3d3c3c;
     border-radius: 1vw;
     width: 70vw;
-    height: 70vh;
+    height: 120vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
