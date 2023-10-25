@@ -2,11 +2,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VARO ADMENT</title>
 	<!-- 반응형 웹 -->
-	<link href="pc.css" media="all and (min-width:1024px)" rel="stylesheet">
-	<link href="tablet.css" media="all and (min-width:768px) and (max-width:1023px)" rel="stylesheet">
-	<link href="smartphone.css" media="all and (max-width:767px)" rel="stylesheet">
+	<link href="pc.css" media="screen and (min-width:1024px)" rel="stylesheet">
+	<link href="tablet.css" media="screen and (min-width:768px) and (max-width:1023px)" rel="stylesheet">
+	<link href="smartphone.css" media=" screen and (max-width:767px)" rel="stylesheet">
 
 	<!-- 
 		<style type="text/css">
@@ -34,10 +35,10 @@
 		
 		<!-- 메인 -->
 		<div class="main_box">
-			<!-- 메뉴 -->
+			<!-- 메뉴(pc) -->
 			<ul class="menu">
 				<li class="logo">
-					<a href="#"><img src="img/01-2. 메인_로고.png"></a>
+					<a href="#"><img src="img/01-2. 메인_로고.png" class="logo_img"></a>
 				</li>
 				<li>
 					<ul>
@@ -49,6 +50,29 @@
 					</ul>
 				</li>
 			</ul>
+			<div class="empty"></div>
+			<!-- 메뉴(모바일) -->
+			<div class="menu02">
+				<div>
+					<a href="#"><img src="img/01-2. 메인_로고.png" class="logo_img"></a>
+				</div>
+				<div onclick="sidebar(1)">
+					<img src="img/menu_icon.png"  class="logo_img">
+				</div>
+			</div>
+			<div class="sidebar_menu">
+			     <div class="close_btn">   
+			         <img src="img/letterx.png" class="close_img" onclick="sidebar(2)">
+			     </div>
+			     <ul class="menu_wrap">
+			        <li onclick="move(1)" class="list1">회사소개</li>
+					<li onclick="move(2)" class="list1">PARTNERS</li>
+					<li onclick="move(3)" class="list1">WE DO</li>
+					<li onclick="move(4)" class="list1">상품컨설팅</li>
+					<li onclick="move(5)" class="list1"><div class="contact_btn">상담문의</div></li>
+			     </ul>
+			</div>
+			
 			
 			<!-- 메인글귀 -->
 			<div class="main_text menu1" id="menu1">
@@ -250,7 +274,7 @@
 						</div>
 					</div>
 					<div class="box_warp2">
-						<div class="service_box extralight">
+						<div class="service_box extralight service_box2">
 							<div class="service_title_box">
 								<div class="service_title_info">경험해 본 적 없는 압도적인 성과</div>
 								<div class="service_title bold">퍼모먼스 마케팅</div>
@@ -272,7 +296,7 @@
 							</div>
 						</div>
 						<div></div>
-						<div class="service_box extralight">
+						<div class="service_box extralight service_box2">
 							<div class="service_title_box">
 								<div class="service_title_info">믿은 수 없는 입소문의 힘</div>
 								<div class="service_title bold">바이럴 마케팅</div>
@@ -347,7 +371,7 @@
 					</div>
 				</div>
 				<div class="contact_line2">
-					<div class="contact_kind_box">
+					<div class="contact_kind_box contact_kind_box2">
 						<div class="contact_kind">내용(선택사항)</div>
 						<div class="contact_input2">
 							<textarea placeholder="문의내용"></textarea>
