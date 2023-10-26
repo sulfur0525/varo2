@@ -35,11 +35,18 @@ window.addEventListener('scroll', function(){
 
 /* 스크롤 */ 
 function move(num){
-var menuHeight = document.querySelector(".menu").offsetHeight;
+	var menuHeight;
+	if(window.innerWidth>=768){
+		menuHeight = document.querySelector(".menu").offsetHeight;
+	}else{
+		menuHeight = document.querySelector(".menu02").offsetHeight;
+		document.querySelector('.sidebar_menu').style.right = '-300px';
+    	document.querySelector('.overlay').style.display = 'none';
+    	document.body.style.overflow = '';
+	}
 
-var location = document.querySelector("#menu"+num).offsetTop;
-
-window.scrollTo({top:location - menuHeight, behavior:'smooth'});
+	var location = document.querySelector("#menu"+num).offsetTop;
+	window.scrollTo({top:location - menuHeight, behavior:'smooth'});
 }
 
 /* 스크롤 공 움직이기 */
@@ -89,30 +96,48 @@ function fadeIn() {
 }
 
 /* 숫자 액션 */
-function num(){
-	let wedo_box = document.querySelector("#menu3").offsetTop-window.innerHeight/2;;
-	let wedo_box2 = document.querySelector("#menu4").offsetTop
-	//console.log(window.scrollY+'=='+wedo_box)
-	if(window.scrollY>=wedo_box && window.scrollY<=wedo_box2){
-		$('.count').each(function() { 
-		  var $this = $(this),
-		      countTo = $this.attr('data-count');
-		       
-		  $({ countNum: $this.text()}).animate({
-		    countNum: countTo 
-		  },
-		  {
-		    duration: 2000, 
-		    easing:'linear',
-		    step: function() {
-		      $this.text(Math.floor(this.countNum));
-		    },
-		    complete: function() { 
-		      $this.text(this.countNum);
-		    }
-		  });  
-		});
-	}
+function num() {
+    let wedo_box = document.querySelector("#menu3").offsetTop - window.innerHeight / 2;
+    let wedo_box2 = document.querySelector("#menu4").offsetTop;
+
+    if (window.scrollY >= wedo_box && window.scrollY <= wedo_box2) {
+        $('.count').each(function() {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            
+            // If the current number is not the final count
+            if ($this.text() != countTo) {
+                $({ countNum: $this.text() }).animate({
+                    countNum: countTo
+                }, {
+                    duration: 2000,
+                    easing: 'linear',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                    }
+                });
+            }
+        });
+    } else {
+        // Reset numbers to initial value when outside the animation range
+        $('.count').text('0');
+    }
+}
+
+/* 오늘 날짜 표시 */
+date();
+function date(){
+	var now = new Date();	// 현재 날짜 및 시간
+	var year = now.getFullYear()// 연도
+	var month = now.getMonth()+1;	// 월
+	var date = now.getDate();	// 일
+	let year2 = year%100;
+	let today = year2+'년 '+month+'월 '+date+'일'
+	
+	document.querySelector(".date").innerHTML = today
 }
 
 /* 스크롤 하면 배경이동 */
@@ -149,13 +174,16 @@ function line_move(){
 /* 모바일 사이드바 */
 function sidebar(action) {
     const menu = document.querySelector('.sidebar_menu');
+    const overlay = document.querySelector('.overlay');
     const body = document.body;
 
     if (action === 1) { // 메뉴 열기
         menu.style.right = '0px';
         body.style.overflow = 'hidden';  // 스크롤 막기
+        overlay.style.display = 'block';
     } else if (action === 2) { // 메뉴 닫기
         menu.style.right = '-300px';
         body.style.overflow = '';  // 스크롤 허용
+        overlay.style.display = 'none';
     }
 }
