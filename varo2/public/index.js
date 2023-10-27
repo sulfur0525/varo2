@@ -40,11 +40,8 @@ function move(num){
 		menuHeight = document.querySelector(".menu").offsetHeight;
 	}else{
 		menuHeight = document.querySelector(".menu02").offsetHeight;
-		document.querySelector('.sidebar_menu').style.right = '-300px';
-    	document.querySelector('.overlay').style.display = 'none';
-    	document.body.style.overflow = '';
+		tween.reverse();
 	}
-
 	var location = document.querySelector("#menu"+num).offsetTop;
 	window.scrollTo({top:location - menuHeight, behavior:'smooth'});
 }
@@ -172,18 +169,28 @@ function line_move(){
 }
 
 /* 모바일 사이드바 */
-function sidebar(action) {
-    const menu = document.querySelector('.sidebar_menu');
-    const overlay = document.querySelector('.overlay');
-    const body = document.body;
+let tween = gsap.to(".sidebar_menu", {opacity: 1, duration: 0.7, display: 'block', paused: true});
 
-    if (action === 1) { // 메뉴 열기
-        menu.style.right = '0px';
-        body.style.overflow = 'hidden';  // 스크롤 막기
-        overlay.style.display = 'block';
-    } else if (action === 2) { // 메뉴 닫기
-        menu.style.right = '-300px';
-        body.style.overflow = '';  // 스크롤 허용
-        overlay.style.display = 'none';
-    }
-}
+document.querySelector("#play").onclick = () => tween.play();
+document.querySelector("#reverse").onclick = () => tween.reverse();
+
+/*
+let nav = document.querySelector('.nav')
+
+let tween = gsap.to(".flair", {
+  duration: 2, 
+  x: () => nav.offsetWidth, // animate by the px width of the nav
+  xPercent: -100, // offset by the width of the box
+  rotation: 360, 
+  ease: "none", 
+  paused: true
+});
+
+// click handlers for controlling the tween instance...
+document.querySelector("#play").onclick = () => tween.play();
+document.querySelector("#pause").onclick = () => tween.pause();
+document.querySelector("#resume").onclick = () => tween.resume();
+document.querySelector("#reverse").onclick = () => tween.reverse();
+document.querySelector("#restart").onclick = () => tween.restart();
+
+*/
