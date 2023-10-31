@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VARO ADMENT</title>
 	<!-- 반응형 웹 -->
-	<link href="pc.css" media="screen and (min-width:1024px)" rel="stylesheet">
-	<link href="tablet.css" media="screen and (min-width:768px) and (max-width:1023px)" rel="stylesheet">
-	<link href="smartphone.css" media=" screen and (max-width:767px)" rel="stylesheet">
+	<link href="css/pc.css" media="screen and (min-width:1024px)" rel="stylesheet">
+	<link href="css/tablet.css" media="screen and (min-width:768px) and (max-width:1023px)" rel="stylesheet">
+	<link href="css/smartphone.css" media=" screen and (max-width:767px)" rel="stylesheet">
 	<!-- PyScript 
 	<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />-->
 	
@@ -30,7 +30,7 @@
 		<!-- 네비게이션 -->
 		<div class="nav_box">
 			<div class="nav" onclick="move(1)"><img src="img/00-2. 네비게이션_2.png"> </div>
-			<div class="nav"><a href="#"><img src="img/00-2. 네비게이션_3.png"></a></div>
+			<div class="nav"><a href="file/CompanyInfo.pdf" download="CompanyInfo.pdf"><img src="img/00-2. 네비게이션_3.png"></a></div>
 			<div class="nav"><a href="카카오톡 링크"><img src="img/00-2. 네이게이션_4.png"></a></div>
 			<div class="nav" onclick="move(5)"><img src="img/00-2. 네비게이션_5.png"></div>
 		</div>
@@ -333,58 +333,6 @@
 		</div>
 		
 		<!-- 상담 -->
-		<!-- <div class="contact_box menu5" id="menu5">
-			스크롤?
-			<div class="line2"></div>
-			
-			<div class="contact_bg">
-				<div class="contact_title bold"> 직접 듣고 싶어요!</div>
-				<div class="contact_line1">
-					<div class="contact_kind_box">
-						<div class="contact_kind">브랜드(서비스)명</div>
-						<div class="contact_input">
-							<input type="text" placeholder="주식회사 OOO">
-						</div>
-					</div>
-					<div class="contact_kind_box">
-						<div class="contact_kind">성함</div>
-						<div class="contact_input">
-							<input type="text" placeholder="홍길동">
-						</div>
-					</div>
-				</div>
-				<div class="contact_line1">
-					<div class="contact_kind_box">
-						<div class="contact_kind">연락처</div>
-						<div class="contact_input">
-							<input type="text"placeholder="010-0000-0000">
-						</div>
-					</div>
-					<div class="contact_kind_box">
-						<div class="contact_kind">이메일</div>
-						<div class="contact_input">
-							<input type="text"placeholder="info@yourmail.com">
-						</div>
-					</div>
-				</div>
-				<div class="contact_line2">
-					<div class="contact_kind_box contact_kind_box2">
-						<div class="contact_kind">내용(선택사항)</div>
-						<div class="contact_input2">
-							<textarea placeholder="문의내용"></textarea>
-						</div>
-					</div>
-				</div>
-				<div class="contact_line3">
-					<div class="contact_info">
-						<div class="gray">위 정보는 컨설팅 최초 연락 목적으로만 사용되며, 사용 된 이후에는 자동 삭제되도록 설계되어있으니</div>
-						<div class="gray">안심하셔도 좋습니다.</div>
-					</div>
-					<div class="contact_sub_btn"></div>
-				</div>
-			</div>
-		</div> -->
-		<!-- 상담 -->
 		<div class="contact_box menu5" id="menu5">
 		    <div class="line2"></div>
 		    
@@ -432,7 +380,7 @@
 		                    <div class="gray">위 정보는 컨설팅 최초 연락 목적으로만 사용되며, 사용된 이후에는 자동 삭제되도록 설계되어있으니 안심하셔도 좋습니다.</div>
 		                </div>
 		                <div class="contact_sub_btn">
-		                    <input type="submit" value="문의하기">
+		                    <input type="submit" type="submit" class="submit_btn">
 		                </div>
 		            </div>
 		        </div>
@@ -464,7 +412,7 @@
 					</div>
 					<div class="padding img_box">
 						<div class="bold img_div">
-							<a href="#">
+							<a href="file/CompanyInfo.pdf" download="CompanyInfo.pdf">
 								<img src="img/06. INFO (1).png">
 								WORK
 							</a>

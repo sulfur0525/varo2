@@ -1,0 +1,603 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
+.extralight{font-family: 'Pretendard'; font-weight: 200;}
+.semibold{font-family: 'Pretendard'; font-weight: 600;}
+.bold{font-family: 'Pretendard'; font-weight: 700;}
+.extrabold{font-family: 'Pretendard'; font-weight: 800;}
+
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Pretendard';
+	color: white;
+}
+a{text-decoration: none;}
+ul{list-style: none;}
+
+.warp{
+	width: 100%; 
+	height: 100%;
+	scroll-behavior:smooth;
+}
+/*---- 00.네비게이션 ----*/
+.nav_box{
+	position: fixed;
+	right: 50px;
+	top : 50%;
+	z-index: 1000;
+}
+.nav{
+	background-image: url("../img/00-2. 네비게이션_1박스.png");
+	height: 8vw;
+	width: 8vw;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.nav a{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav img{
+	width: 60%;
+}
+
+/*---- 01. 메인 ----*/
+/* 배경화면 */
+.main_box{
+	background-image: url("../img/01-1. 메인_배경.png");	
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+/* 메뉴 */
+.menu{display: none;}
+.empty{height: 20vw;}
+.menu02{
+	width: 100vw;
+    height: 15vw;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: 35% 20%;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: black;
+}
+.logo_img{
+	height: 6vw;	
+}
+.sidebar_menu{
+	display:none;
+	opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 10000;
+    position: fixed;
+}
+.close_btn{
+	text-align: right;
+}
+.menu_wrap{
+	text-align: center;
+    padding-top: 5%;
+}
+.list1{
+	padding: 5% 3%;
+	cursor: pointer;
+	font-size: 7vw;
+}
+.close_img{
+	height: 5vw;
+    padding: 5% 7%;
+}
+
+/* 메인 텍스트 */
+.main_text{
+    width: 65%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.blue{
+	color: #0090FF;
+}
+.main_text1{
+	text-align: left;
+	font-size: 9vw;
+}
+.main_text2{
+	text-align: right;
+	font-size: 6vw;
+}
+.text_top{
+	font-size: 3vw;
+}
+/* 스크롤 */
+.scroll{
+	width: 100%;
+    height: 26%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scroll_bg{
+	background-image: url('../img/01-3. 메인_스크롤 유도 배경.png');
+    height: 12vw;
+    width: 4vw;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;   
+}
+.scroll_bg img{width: 3vw;}
+.ball{
+	position: absolute;
+	top : 5px;
+}
+
+/*---- 02. 파트너 ----*/
+.partners_box{
+	background-color : #000000;
+	height: 100vw;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.partner_title{
+	font-size: 6vw;
+	height: 10%;
+}
+.logo_warp{
+	width: 70vw;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.inView {
+  opacity: 0;
+  animation: fadeIn 2s both;
+}
+.partner_logo{
+	background-image: url("../img/02. 파트너_로고박스.png");
+	background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 17vw;
+    width: 22vw;
+    color: #525252;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw
+}
+
+/*---- 03. WEDO(숫자) ----*/
+.wedo_box{
+	background-image: url("../img/03. WEDO_배경.png");
+	background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.date{
+	font-size: 6vw;
+}
+.wedo_nums{
+	display: grid;
+    height: 20vw;
+    width: 90%;
+    grid-template-columns: 30% 30% 30%;
+    align-items: center;
+    justify-content: space-between;
+}
+.wedo_num{
+	font-size: 10vw;	
+	text-align: center;
+}
+.wedo_text{
+	font-size: 3vw;
+	text-align: center;
+}
+
+/*---- 04. 컨설팅 ----*/
+.consulting_box{
+	background-image: url("../img/04-1. 컨설팅_배경.png");
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 450vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+/* What We Do */
+.consulting_set1{
+	width: 90vw;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 20%;
+}
+.consulting_title{
+	font-size: 8vw;
+	text-align: center;
+}
+.title_info{
+	font-size: 4vw;
+	text-align: center;
+}
+.WWD_box{
+    border: 2px solid #3d3c3c;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+.varo_circle{
+	background-image: url("../img/04-2. 컨설팅_가로박스_2_우측 원.png");
+	height: 100%;
+    width: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vw;
+}
+.consulting_list{
+	font-size: 3.8vw;
+}
+.consulting_info{
+	font-size: 2.5vw;
+	padding-top: 5px;
+}
+.consulting_list_box{
+	height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1vw;
+    justify-content: space-evenly;
+}
+.dot_line{
+	width: 20%;
+    border-bottom: 2px dotted white;
+}
+.consulting_result{
+	background-image: url("../img/04-2. 컨설팅_가로박스_1_우측 원.png");
+	height: 100%;
+    width: 15%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.result_info{
+	font-size: 2.5vw;
+}
+.comment{
+	font-size: 4vw;
+	text-align: center;
+	line-height: 5vw;
+}
+/* Services */
+.consulting_set2{
+	width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 55%;
+}
+.service_box_warp{
+	width: 100%;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    height: 90%;
+    align-content: space-between;
+}
+.box_warp{
+	width: 100%;
+    height: 100%;
+    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+}
+.box_warp2{
+	width: 100%;
+    align-items: center;
+    height: 100%;
+    justify-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+}
+.service_box{
+	height: 48%;
+    width: 45%;
+    border: 2px solid #3d3c3c;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.service_box3{
+	margin: 0 6%;
+}
+.service_box2{
+	height: 98%;
+}
+.service_box img{
+	height: 20vw;
+}
+.service_title_box{
+	text-align: center;
+}
+.service_title_info{
+	font-size: 3vw;
+    text-align: center;
+    line-height: 4vw;
+}
+.service_title{
+	font-size: 3.8vw;
+}
+/* 상담유도 */
+.consulting_set3{
+	width: 70vw;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 10%;
+}
+.consulting_info2{
+	font-size: 4vw;
+	text-align: center;
+}
+.consulting_list2{
+	font-size: 6vw;
+	text-align: center;
+}
+/* 스크롤? */
+.line{
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    background-color: white;
+    width: 2px;
+    height: 6.5vw;
+}
+
+/*---- 05. 상담 ----*/
+.contact_box{
+	background-image: url("../img/05-1. 상담문의_배경.png");
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 140vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.contact_bg{
+	    border: 2px solid #3d3c3c;
+    border-radius: 1vw;
+    width: 80vw;
+    height: 120vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #060606;
+}
+.contact_title{
+	text-align: center;
+	font-size: 6vw;
+    padding: 2% 0 0 0;
+}
+.contact_line1{
+	display: flex;
+    width: 85%;
+    height: 20%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contact_kind_box{
+	height: 45%;
+    width: 100%;
+}
+.contact_kind{
+	font-size: 4vw;
+    padding-left: 1%;
+    line-height: 6vw;
+}
+.contact_input{
+	height: 50%;
+    width: 100%;
+    background-color: #848484;
+    border-radius: 1vw;
+}
+.contact_input input{
+	background: none;
+    border: none;
+    height: 100%;
+    width: 98%;
+    padding-left: 2%;
+    font-size: 3vw;
+}
+.contact_input input::placeholder{
+	color: #3f3f3f
+}
+input:focus {outline: none;}
+.contact_line2{
+	width: 85%;
+    height: 31%;
+}
+.contact_kind_box2{height: 100%;}
+.contact_input2{
+	height: 80%;
+    width: 100%;
+    background-color: #848484;
+    border-radius: 1vw;
+}
+.contact_input2 textarea{
+	background: none;
+	border: none;
+	height: 90%;
+    width: 96%;
+    padding: 1% 2%;
+    font-size: 3vw;
+}
+.contact_input2 textarea::placeholder{
+	color: #3f3f3f
+} 
+textarea:focus {outline: none;}
+.contact_line3{
+	width: 85%;
+	display: flex;
+	justify-content: space-between;
+    align-items: flex-start;
+}
+.contact_info{
+	width: 80%;
+	font-size: 2vw;
+	line-height: 3vw;
+}
+.gray{
+	color: #828282;
+}
+.contact_sub_btn{
+	background-image: url("../img/05-2. 상담문의_내용 박스_3_문의하기 버튼.png");
+	height: 100%;
+    width: 40%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.submit_btn{
+	width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: transparent;
+}
+/* 스크롤? */
+.line2{
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    background-color: white;
+    width: 2px;
+    height: 0px;
+}
+
+/*---- 06. 회사정보 ----*/
+.info_box{
+	background-color: #000000;
+    height: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+	width: 70vw;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact_info_title{
+	font-size: 5vw;
+    padding-bottom: 3%;
+    border-bottom: 1px solid white;
+    width: 100%;
+    margin-bottom: 3%;
+}
+.contact_info_box{
+	display: grid;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+    font-size: 2vw;
+    line-height: 3vw;
+    grid-template-rows: 70% 20%;
+    align-content: space-between;
+}
+.contact_info_subbox{
+	display: grid;
+    align-items: flex-end;
+    grid-template-columns: 65% 35%;
+}
+.company{
+	font-size: 3vw;
+    padding-bottom: 2%;
+}
+.img_box{
+	display: flex;
+    justify-content: space-between;
+}
+.img_div{
+	display: flex;
+    height: 5vw;
+    align-items: flex-end;
+}
+.img_div img{
+	height: 3vw;
+}
+
+
+
+
+
