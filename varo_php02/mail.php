@@ -56,8 +56,7 @@ try {
     // 수신자 및 발신자 설정
     $mail->setFrom('varomail00@gmail.com', '=?UTF-8?B?'.base64_encode('상담문의: '.$brand).'?=');// 실제 보내는 주소 (SMTP 인증 주소)
     $mail->addReplyTo($email, '=?UTF-8?B?'.base64_encode($brand).'?='); // 사용자가 입력한 이메일로 답장을 받기 위한 설정
-    /* $mail->addAddress('vorsche@varosolution.co.kr', 'VARO');  */
-    $mail->addAddress('fodlsl62@gmail.com', 'VARO');
+    $mail->addAddress('vorsche@varosolution.co.kr', 'VARO');
     
     // 메일 내용 설정
     $mail->isHTML(true); // HTML 형식의 메일로 설정
@@ -68,20 +67,20 @@ try {
     if(!$mail->send()) {
         // 메일 전송에 실패한 경우
         echo "<script>
-                alert('메일을 보내는데 실패했습니다: " . addslashes($mail->ErrorInfo) . "');
+                alert('전송에 실패했습니다: " . addslashes($mail->ErrorInfo) . "');
                 window.location.href = 'index.php';
               </script>";
     } else {
         // 메일 전송에 성공한 경우
         echo "<script>
-                alert('메일이 성공적으로 전송되었습니다.');
+                alert('문의해주셔서 감사합니다. 곧 연락드리도록 하겠습니다.');
                 window.location.href = 'index.php';
               </script>";
     }
 } catch (Exception $e) {
     // PHPMailer 예외 처리
     echo "<script>
-            alert('메일을 보내는 중 오류가 발생했습니다: " . addslashes($e->getMessage()) . "');
+            alert('오류가 발생했습니다: " . addslashes($e->getMessage()) . "');
             window.location.href = 'index.php';
           </script>";
 }
