@@ -168,6 +168,7 @@ function line_move(){
 	
 }
 
+
 /* 모바일 사이드바 */
 let tween = gsap.to(".sidebar_menu", {opacity: 1, duration: 0.7, display: 'block', paused: true});
 
