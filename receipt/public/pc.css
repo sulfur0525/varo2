@@ -9,8 +9,12 @@ th{
 	font-weight: normal;
 }
 .warp{
+	padding: 5px;;
+	width: 100%;
+}
+.box{
 	border: 1px solid black;
-    width: 320px;
+    width: 300px;
     margin: 0 auto;
     padding: 30px;
 }

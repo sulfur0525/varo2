@@ -4,124 +4,238 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Insert title here</title>
-	<!-- 반응형 웹 -->
-	<link href="pc.css" media="screen and (min-width:768px)" rel="stylesheet">
-	<link href="smartphone.css" media=" screen and (max-width:767px)" rel="stylesheet">
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			font-size: 15px;
+		    line-height: 16px;
+		}
+		th{
+			font-weight: normal;
+		}
+		.warp{
+			padding: 5px;;
+			width: 100%;
+		}
+		.box{
+			border: 1px solid black;
+		    width: 300px;
+		    margin: 0 auto;
+		    padding: 30px;
+		}
+		.box1{
+			text-align: center;
+		    font-size: 25px;
+		    width: 100%;
+		}
+		.box2{
+			padding: 20px 0 5px 0;
+		    border-bottom: 1px black dashed;
+		    width: 100%;
+		}
+		.info_box{
+			display: flex;
+			line-height: 16px;
+		}
+		.letter{
+			letter-spacing: 5px;
+		}
+		.info_type{
+			width: 20%;
+			text-align: left;
+		}
+		.info_box td{
+			max-width: 80%;
+		    min-width: 30%;
+		}
+		.box3{
+			border-top: 1px dashed black;
+		    margin-top: 3px;
+		    width: 100%;
+		    border-collapse: collapse
+		}
+		.box3 th{
+			border-bottom: 1px dashed black;
+			padding: 2% 0;
+		}
+		.box3 td{
+			padding: 2% 0;
+		}
+		.b-top td{
+			border-top: 1px dashed black;
+		}
+		.right{
+			text-align: right;
+		}
+		.center{
+			text-align: center;
+		}
+		.big_top{
+			font-size: 25px;
+		    padding-top: 3% !important;
+		    height: 25px;
+		}
+		.big_bot{
+			font-size: 25px;
+		    padding-bottom: 3% !important;
+		    height: 25px;
+		}
+		.box4{
+			border-top: 1px dashed black;
+		}
+		.box4_title{
+			text-align: center;
+		    padding: 2%;
+		}
+		.box4 table{
+			width: 100%;
+			padding: 2% 0;
+		    border-collapse: collapse;
+		}
+		.box4 th{
+			width: 27%;
+			text-align: justify;
+		  	line-height: 0;
+		  	height: 17px;
+		}
+		.box4 th:after {
+		  content: "";
+		  display: inline-block;
+		  width: 100%;
+		}
+		.box4 th:before {
+		  content: "";
+		  display: inline-block;
+		  width: 100%;
+		}
+		.box4 td{
+			width: 73%;
+		    padding-left: 3%;
+		}
+		.info{
+			padding: 8% 0;
+		    border-top: 1px dashed black;
+		    margin-top: 2%;
+		}	
+	</style>
 </head>
 <body>
 	<div class="warp">
-		<div class="box1">
-			[영수증]-재발행
-		</div>
-		<table class="box2">
-		    <tr class="info_box">
-		        <th class="info_type">[매장명]</th>
-		        <td colspan="3">(주)엘브라더스</td>
-		    </tr>
-		    <tr class="info_box">
-		        <th class="info_type">[사업자]</td>
-		        <td colspan="3">719-81-00231</td>
-		    </tr>
-		    <tr class="info_box">
-		        <th class="info_type letter">[주소]</th>
-		        <td colspan="3">경기 화성시 동탄첨단산업1로 27 (영천동, 금강펜테리움 IX타워) a동 5층</td>
-		    </tr>
-		    <tr class="info_box">
-		        <th class="info_type">[대표자]</th>
-		        <td>임철우</td>
-		        <th class="info_type">[TEL]</td>
-		        <td>02-000-0000</td>
-		    </tr>
-		    <tr class="info_box">
-		        <th class="info_type">[매출일]</td>
-		        <td colspan="3">2023-11-01 18:55:15</td>
-		    </tr>
-		    <tr class="info_box">
-		        <th class="info_type">[영수증]</th>
-		        <td colspan="3">20231025-01-0042</td>
-		    </tr>
-		</table>
-		<table class="box3">
-			<tr>
-				<th>상품명</th>
-				<th>단가</th>
-				<th>수량</th>
-				<th class="right">금액</th>
-			</tr>
-			<tr>
-				<td>환타</td>
-				<td class="center">100</td>
-				<td class="center">1</td>
-				<td class="right">100</td>
-			</tr>
-			<tr class="b-top">
-				<td colspan="3">합계금액</td>
-				<td class="right">100</td>
-			</tr>
-			<tr class="b-top">
-				<td colspan="3" class="center">부가세 과세물품가액</td>
-				<td class="right">91</td>
-			</tr>
-			<tr>
-				<td colspan="3" class="center">부가세</td>
-				<td class="right">9</td>
-			</tr>
-			<tr class="b-top">
-				<td colspan="3" class="big_top">받을금액</td>
-				<td class="right big_top">100</td>
-			</tr>
-			<tr>
-				<td colspan="3" class="big_bot">받은금액</td>
-				<td class="right big_top">100</td>
-			</tr>
-			<tr class="b-top">
-				<td colspan="3">신용카드</td>
-				<td class="right">100</td>
-			</tr>
-		</table>
-		<div class="box4">
-			<div class="box4_title">*** 신용승인정보(고객용) ***</div>
-			<table>
+		<div class="box">
+			<div class="box1">
+				[영수증]-재발행
+			</div>
+			<table class="box2">
+			    <tr class="info_box">
+			        <th class="info_type">[매장명]</th>
+			        <td colspan="3">(주)엘브라더스</td>
+			    </tr>
+			    <tr class="info_box">
+			        <th class="info_type">[사업자]</td>
+			        <td colspan="3">719-81-00231</td>
+			    </tr>
+			    <tr class="info_box">
+			        <th class="info_type letter">[주소]</th>
+			        <td colspan="3">경기 화성시 동탄첨단산업1로 27 (영천동, 금강펜테리움 IX타워) a동 5층</td>
+			    </tr>
+			    <tr class="info_box">
+			        <th class="info_type">[대표자]</th>
+			        <td>임철우</td>
+			        <th class="info_type">[TEL]</td>
+			        <td>02-000-0000</td>
+			    </tr>
+			    <tr class="info_box">
+			        <th class="info_type">[매출일]</td>
+			        <td colspan="3">2023-11-01 18:55:15</td>
+			    </tr>
+			    <tr class="info_box">
+			        <th class="info_type">[영수증]</th>
+			        <td colspan="3">20231025-01-0042</td>
+			    </tr>
+			</table>
+			<table class="box3">
 				<tr>
-					<th>카 드 종 류:</th>
-					<td></td>
+					<th>상품명</th>
+					<th>단가</th>
+					<th>수량</th>
+					<th class="right">금액</th>
 				</tr>
 				<tr>
-					<th>카 드 번 호:</th>
-					<td>9441-92**-****-****</td>
+					<td>환타</td>
+					<td class="center">100</td>
+					<td class="center">1</td>
+					<td class="right">100</td>
+				</tr>
+				<tr class="b-top">
+					<td colspan="3">합계금액</td>
+					<td class="right">100</td>
+				</tr>
+				<tr class="b-top">
+					<td colspan="3" class="center">부가세 과세물품가액</td>
+					<td class="right">91</td>
 				</tr>
 				<tr>
-					<th>할 부 개 월:</th>
-					<td>일시불</td>
+					<td colspan="3" class="center">부가세</td>
+					<td class="right">9</td>
+				</tr>
+				<tr class="b-top">
+					<td colspan="3" class="big_top">받을금액</td>
+					<td class="right big_top">100</td>
 				</tr>
 				<tr>
-					<th>판 매 금 액:</th>
-					<td class="right">46</td>
+					<td colspan="3" class="big_bot">받은금액</td>
+					<td class="right big_top">100</td>
 				</tr>
-				<tr>
-					<th>부 가 세:</th>
-					<td class="right">4</td>
-				</tr>
-				<tr>
-					<th>승 인 금 액:</th>
-					<td class="right">50</td>
-				</tr>
-				<tr>
-					<th>승 인 번 호:</th>
-					<td>76159534</td>
-				</tr>
-				<tr>
-					<th>승 인 일 시:</th>
-					<td>2023-11-01 18:54:32</td>
-				</tr>
-				<tr>
-					<th>가맹점 번호:</th>
-					<td></td>
+				<tr class="b-top">
+					<td colspan="3">신용카드</td>
+					<td class="right">100</td>
 				</tr>
 			</table>
-		</div>
-		<div class="info">
-			* 물품반품시 본 영수증을 필히 지참하여 주시기 바랍니다.
+			<div class="box4">
+				<div class="box4_title">*** 신용승인정보(고객용) ***</div>
+				<table>
+					<tr>
+						<th>카 드 종 류:</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th>카 드 번 호:</th>
+						<td>9441-92**-****-****</td>
+					</tr>
+					<tr>
+						<th>할 부 개 월:</th>
+						<td>일시불</td>
+					</tr>
+					<tr>
+						<th>판 매 금 액:</th>
+						<td class="right">46</td>
+					</tr>
+					<tr>
+						<th>부 가 세:</th>
+						<td class="right">4</td>
+					</tr>
+					<tr>
+						<th>승 인 금 액:</th>
+						<td class="right">50</td>
+					</tr>
+					<tr>
+						<th>승 인 번 호:</th>
+						<td>76159534</td>
+					</tr>
+					<tr>
+						<th>승 인 일 시:</th>
+						<td>2023-11-01 18:54:32</td>
+					</tr>
+					<tr>
+						<th>가맹점 번호:</th>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			<div class="info">
+				* 물품반품시 본 영수증을 필히 지참하여 주시기 바랍니다.
+			</div>
 		</div>
 	</div>
 </body>
