@@ -1,0 +1,110 @@
+@charset "UTF-8";
+*{
+	margin: 0px;
+	padding: 0px;
+	font-size: 15px;
+    line-height: 16px;
+}
+th{
+	font-weight: normal;
+}
+.warp{
+	border: 1px solid black;
+    width: 320px;
+    margin: 0 auto;
+    padding: 30px;
+}
+.box1{
+	text-align: center;
+    font-size: 25px;
+    width: 100%;
+}
+.box2{
+	padding: 20px 0 5px 0;
+    border-bottom: 1px black dashed;
+    width: 100%;
+}
+.info_box{
+	display: flex;
+	line-height: 16px;
+}
+.letter{
+	letter-spacing: 5px;
+}
+.info_type{
+	width: 20%;
+	text-align: left;
+}
+.info_box td{
+	max-width: 80%;
+    min-width: 30%;
+}
+.box3{
+	border-top: 1px dashed black;
+    margin-top: 3px;
+    width: 100%;
+    border-collapse: collapse
+}
+.box3 th{
+	border-bottom: 1px dashed black;
+	padding: 2% 0;
+}
+.box3 td{
+	padding: 2% 0;
+}
+.b-top td{
+	border-top: 1px dashed black;
+}
+.right{
+	text-align: right;
+}
+.center{
+	text-align: center;
+}
+.big_top{
+	font-size: 25px;
+    padding-top: 3% !important;
+    height: 25px;
+}
+.big_bot{
+	font-size: 25px;
+    padding-bottom: 3% !important;
+    height: 25px;
+}
+.box4{
+	border-top: 1px dashed black;
+}
+.box4_title{
+	text-align: center;
+    padding: 2%;
+}
+.box4 table{
+	width: 100%;
+	padding: 2% 0;
+    border-collapse: collapse;
+}
+.box4 th{
+	width: 27%;
+	text-align: justify;
+  	line-height: 0;
+  	height: 17px;
+}
+.box4 th:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+.box4 th:before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+.box4 td{
+	width: 73%;
+    padding-left: 3%;
+}
+.info{
+	padding: 8% 0;
+    border-top: 1px dashed black;
+    margin-top: 2%;
+}
